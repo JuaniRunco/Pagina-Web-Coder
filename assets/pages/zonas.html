@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zonas</title>
+    <!-- Link de iconos de font awesome 4.7.0 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Link del style css -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<!-- Body -->
+
+<body>
+    <header>
+        <!-- Navbar -->
+        <nav>
+            <div class="nav">
+                <!-- Logo de Mendoza Lotes -->
+                <a class="logo" href="../../index.html">
+                    <img class="imgLogo" src="../images/Logos/logo.png" height="120px" alt="Logo Mendoza Lotes">
+                </a>
+                <!-- Menu que se va a ver a los 1060px -->
+                <button class="toggle">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <!-- Links del navbar -->
+                <ul class="navMenu">
+                    <li class="navMenuItem">
+                        <a class="navLink" href="../../index.html">Inicio</a>
+                    </li>
+                    <li class="navMenuItem">
+                        <a class="navLink" href="terrenos.html">Terrenos</a>
+                    </li>
+                    <li class="navMenuItem">
+                        <a class="navLink" href="zonas.html">Zonas</a>
+                    </li>
+                    <li class="navMenuItem">
+                        <a class="navLink" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="navMenuItem">
+                        <a class="navLink" href="nosotros.html">Nosotros</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Main -->
+    <main class="zonas">
+        <h1>Zonas</h1>
+        <!-- Zonas disponibles en las que se venden los terrenos maquetadas con grid-->
+        <div class="zonasBody">
+            <!-- Zonas con imágenes y videos de publicidad-->
+            <div class="guaymallen">
+                <h2>Guaymallén</h2>
+                <div class="imgVideo">
+                    <img src="../images/Barrios/Guaymallen-1.png" alt="">
+                    <iframe width="460" height="315" src="https://www.youtube.com/embed/0bACdfWwgJI"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="maipu">
+                <h2>Maipú</h2>
+                <div class="imgVideo">
+                    <img src="../images/Barrios/Maipu-1.png" alt="">
+                    <iframe width="460" height="315" src="https://www.youtube.com/embed/Asmjjp5KPgk"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="lasHeras">
+                <h2>Las Heras</h2>
+                <div class="imgVideo">
+                    <img src="../images/Barrios/Las-Heras-1.png" alt="">
+                    <iframe width="460" height="315" src="https://www.youtube.com/embed/QV2du1GMx5k"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="lujan">
+                <h2>Luján de Cuyo</h2>
+                <div class="imgVideo">
+                    <img src="../images/Barrios/Lujan-1.png" alt="">
+                    <iframe width="460" height="315" src="https://www.youtube.com/embed/zFX4aFcNv0c"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="footerRedes">
+            <h3>Redes</h3>
+            <a href="https://www.facebook.com/lotesyconstruccionmendoza" target="_blank" class="fa fa-facebook"></a>
+            <a href="https://www.instagram.com/" target="_blank" class="fa fa-instagram"></a>
+            <a href="#" target="_blank" class="fa fa-whatsapp"></a>
+        </div>
+        <div class="footerContacto">
+            <h3>Contacto</h3>
+            <p>correo: mendozalotes@gmail.com</p>
+            <p>móvil: 2616904120</p>
+        </div>
+        <p class="copy"> ©Copyright 2022 mendozalotes.com</p>
+    </footer>
+
+    <!-- Script para que funcione el toggle -->
+    <script>
+        const navToggle = document.querySelector(".toggle");
+        const navMenu = document.querySelector(".navMenu");
+
+        navToggle.addEventListener("click", () => {
+            navMenu.classList.toggle("navMenuVisible");
+        })
+
+    </script>
+</body>
+
+</html>

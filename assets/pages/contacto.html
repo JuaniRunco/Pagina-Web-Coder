@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <!-- Link de iconos de font awesome 4.7.0 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Link del style css -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<!-- Body -->
+
+<body>
+    <header>
+        <!-- Navbar -->
+        <nav>
+            <div class="nav">
+                <!-- Logo de Mendoza Lotes -->
+                <a class="logo" href="../../index.html">
+                    <img class="imgLogo" src="../images/Logos/logo.png" height="120px" alt="Logo Mendoza Lotes">
+                </a>
+                <!-- Menu que se va a ver a los 1060px -->
+                <button class="toggle">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <!-- Links del navbar -->
+                <ul class="navMenu">
+                    <li class="navMenuItem">
+                        <a class="navLink" href="../../index.html">Inicio</a>
+                    </li>
+                    <li class="navMenuItem">
+                        <a class="navLink" href="terrenos.html">Terrenos</a>
+                    </li>
+                    <li class="navMenuItem">
+                        <a class="navLink" href="zonas.html">Zonas</a>
+                    </li>
+                    <li class="navMenuItem">
+                        <a class="navLink" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="navMenuItem">
+                        <a class="navLink" href="nosotros.html">Nosotros</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Main -->
+    <main class="mainContacto">
+        <div class="contacto">
+            <h1>Contacto</h1>
+            <!-- Contenedor de todo el formulario -->
+            <div class="formulario">
+                <form id="form" action="">
+                    <!-- Datos del nombre y del email -->
+                    <div class="datos">
+                        <p class="txtNombre"><input type="text" name="nombre" id="nombre" required placeholder="Nombre">
+                        </p>
+                        <p><input type="text" name="correo" id="correo" required placeholder="Email">
+                        </p>
+                    </div>
+                    <!-- Cuadro para ingresar el mensaje y contactar -->
+                    <div class="cuadro">
+                        <p class="texto"><textarea name="mensaje" id="mensaje" cols="20" rows="6" required
+                                placeholder="Mensaje"></textarea></p>
+                    </div>
+                    <input type="submit" id="button" value="Enviar">
+                </form>
+            </div>
+            <!-- Otros datos como el mail, el celular y redes de contacto -->
+            <div class="masInfo">
+                <div class="masDatos">
+                    <p>correo: mendozalotes@gmail.com</p>
+                    <p>móvil: 2616904120</p>
+                </div>
+                <div class="redes">
+                    <div class="facebook">
+                        <a id="icons" href="https://www.facebook.com/lotesyconstruccionmendoza" class="fa fa-facebook"
+                            target="_blank">
+                        </a>
+                    </div>
+                    <div class="instagram">
+                        <a id="icons" href="https://www.instagram.com/" class="fa fa-instagram" target="_blank">
+                        </a>
+                    </div>
+                    <div class="wap">
+                        <a id="icons" href="#" class="fa fa-whatsapp" target="_blank">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="footerRedes">
+            <h3>Redes</h3>
+            <a href="https://www.facebook.com/lotesyconstruccionmendoza" target="_blank" class="fa fa-facebook"></a>
+            <a href="https://www.instagram.com/" target="_blank" class="fa fa-instagram"></a>
+            <a href="#" target="_blank" class="fa fa-whatsapp"></a>
+
+        </div>
+        <div class="footerContacto">
+            <h3>Contacto</h3>
+            <p>correo: mendozalotes@gmail.com</p>
+            <p>móvil: 2616904120</p>
+        </div>
+        <p class="copy"> ©Copyright 2022 mendozalotes.com</p>
+    </footer>
+
+    <!-- Scripts para que funcione el formulario de contacto y llegue al mail -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        emailjs.init('user_8NRFNr271kSTKjUp0oXfe')
+    </script>
+
+    <script>
+        const btn = document.getElementById('button');
+        const nombre = document.getElementById('nombre');
+        const correo = document.getElementById('correo');
+        const mensaje = document.getElementById('mensaje');
+
+        document.getElementById('form')
+            .addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                btn.value = 'Enviando...';
+
+                const serviceID = 'default_service';
+                const templateID = 'template_95y36tk';
+
+                emailjs.sendForm(serviceID, templateID, this)
+                    .then(() => {
+                        btn.value = 'Enviar mensaje';
+                        alert('Mensaje enviado satisfactoriamente!');
+                        nombre.value = '';
+                        correo.value = '';
+                        mensaje.value = '';
+                    }, (err) => {
+                        btn.value = 'Enviar mensaje';
+                        alert(JSON.stringify(err));
+                    });
+            });
+    </script>
+
+    <!-- Script para que funcione el toggle -->
+    <script>
+        const navToggle = document.querySelector(".toggle");
+        const navMenu = document.querySelector(".navMenu");
+
+        navToggle.addEventListener("click", () => {
+            navMenu.classList.toggle("navMenuVisible");
+        })
+
+    </script>
+</body>
+
+</html>
