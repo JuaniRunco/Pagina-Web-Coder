@@ -1,0 +1,87 @@
+/*--------- INDEX --------- */
+
+$font:'Montserrat', sans-serif;
+$color-wine:#400f85;
+
+.tituloIndex {
+    margin-top: 250px;
+    margin-bottom: 80px;
+    text-align: center;
+    font-family: $font;
+    font-size: 70px;
+    font-weight: 600;
+
+    p {
+        /*Mendoza Lotes en violeta*/
+        color: $color-wine;
+    }
+}
+
+/*Tamaño del carrusel*/
+.tamañoImgCar {
+    height: 100%;
+    left: 0;
+    top: 0;
+    padding: 1% 12%;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        object-fit: cover;
+    }
+}
+
+.verMas {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.verMasLink {
+    text-decoration: none;
+    font-size: 20px;
+    color: black !important;
+}
+
+/* Media querys Index*/
+@media screen and (max-width: 1060px) {
+
+    .tituloIndex {
+        margin-top: 216px;
+        margin-bottom: 80px;
+        font-size: 60px;
+    }
+
+    .tamañoImgCar {
+        padding: 0% 6%;
+    }
+
+    .verMas {
+        margin-top: 20px;
+        margin-bottom: 70px;
+        text-align: center;
+        padding-right: 0px;
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+
+    .tituloIndex {
+        margin-top: 179px;
+        margin-bottom: 60px;
+        font-size: 40px;
+    }
+
+    .verMas {
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width: 335px) {
+    .copy {
+        margin-top: 40px;
+    }
+}
