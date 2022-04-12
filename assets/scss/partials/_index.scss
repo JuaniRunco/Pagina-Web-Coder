@@ -1,14 +1,32 @@
 /*--------- INDEX --------- */
+// Map
+$fonts:(font:('Montserrat', sans-serif),
+    large-font:70px,
+    medium-font:60px,
+    small-font:40px,
+    smaller-font:20px,
+);
 
-$font:'Montserrat', sans-serif;
+// Extend
+%center {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+// Mixin
+@mixin properties($margin-top, $width, $height) {
+    margin-top: $margin-top;
+    width: $width;
+    height: $height;
+}
+
 $color-wine:#400f85;
 
 .tituloIndex {
-    margin-top: 250px;
-    margin-bottom: 80px;
-    text-align: center;
-    font-family: $font;
-    font-size: 70px;
+    @extend %center;
+    @include properties(250px, auto, auto);
+    font-family: map-get($fonts, font);
+    font-size: map-get($fonts, large-font);
     font-weight: 600;
 
     p {
@@ -19,7 +37,7 @@ $color-wine:#400f85;
 
 /*Tamaño del carrusel*/
 .tamañoImgCar {
-    height: 100%;
+    @include properties(0, 100%, 100%);
     left: 0;
     top: 0;
     padding: 1% 12%;
@@ -33,14 +51,13 @@ $color-wine:#400f85;
 }
 
 .verMas {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 70px;
+    @include properties(0px, 100%, 100%);
+    @extend %center;
 }
 
 .verMasLink {
     text-decoration: none;
-    font-size: 20px;
+    font-size: map-get($fonts, smaller-font);
     color: black !important;
 }
 
@@ -50,7 +67,7 @@ $color-wine:#400f85;
     .tituloIndex {
         margin-top: 216px;
         margin-bottom: 80px;
-        font-size: 60px;
+        font-size: map-get($fonts, medium-font);
     }
 
     .tamañoImgCar {
@@ -60,7 +77,6 @@ $color-wine:#400f85;
     .verMas {
         margin-top: 20px;
         margin-bottom: 70px;
-        text-align: center;
         padding-right: 0px;
     }
 
@@ -71,11 +87,11 @@ $color-wine:#400f85;
     .tituloIndex {
         margin-top: 179px;
         margin-bottom: 60px;
-        font-size: 40px;
+        font-size: map-get($fonts, small-font);
     }
 
     .verMas {
-        font-size: 20px;
+        font-size: map-get($fonts, smaller-font);
     }
 
 }
