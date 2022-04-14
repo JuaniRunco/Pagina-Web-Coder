@@ -1,0 +1,78 @@
+/*--------- NOSOTROS ---------*/
+/*todo el contenedor del main*/
+.mainNos {
+    @include properties(134px, auto, auto);
+    display: flex;
+    flex-direction: row;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+/*título y párrafo*/
+.nosotros {
+    @include properties(150px, auto, auto);
+    margin-right: 50px;
+
+    h1 {
+        padding-top: 66px;
+        font-size: map-get($fonts, medium-font);
+        margin-bottom: 60px;
+    }
+
+    p {
+        @include properties(50px, auto, auto);
+        font-size: 1.2rem;
+        padding-right: 50px;
+        text-align: justify;
+    }
+}
+
+.video {
+    @include properties(0, 40vw, 93vh);
+    margin-bottom: 50px;
+}
+
+/* Media Querys Nosotros */
+@media screen and (max-width: 1400px) {
+
+    .nosotros {
+        margin-right: 0px;
+
+        h1 {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 1060px) {
+    .mainNos {
+        margin-top: 100px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nosotros {
+        margin-top: 7%;
+        margin-right: 0px;
+
+        p {
+            padding-right: 0px;
+            padding-bottom: 40px;
+        }
+    }
+
+    .video {
+        width: 85vw;
+        height: auto;
+        margin-bottom: 100px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .nosotros {
+        h1 {
+            font-size: map-get($fonts, small-font);
+        }
+    }
+}

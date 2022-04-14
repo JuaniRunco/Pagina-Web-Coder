@@ -1,0 +1,197 @@
+/*--------- CONTACTO ---------*/
+
+.mainContacto {
+    /*para que quede todo el main centrado*/
+    text-align: center;
+    @include properties(134px, auto,auto);
+    background-color: rgba(0, 0, 0, 0.157);
+}
+
+/*contenedor de contacto*/
+.contacto {
+    padding-right: 20%;
+    padding-left: 20%;
+    justify-content: center;
+
+    h1 {
+        padding-top: 66px;
+    }
+}
+
+.formulario {
+    @include properties(50px, auto,auto);
+}
+
+/*datos del nombre y el email*/
+.datos {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.txtNombre {
+    margin-right: 20px;
+}
+
+$color-fondo-contacto:#ced4da;
+
+/*dandole estilo al input del nombre*/
+#nombre {
+    padding: 10px;
+    font-size: 15px;
+    border: 1px;
+    border-radius: 5px;
+    border: 1px solid $color-fondo-contacto;
+}
+
+/*dandole estilo al input del email*/
+#correo {
+    padding: 10px;
+    font-size: 15px;
+    border: 1px;
+    border-radius: 5px;
+    border: 1px solid $color-fondo-contacto;
+}
+
+/*dandole estilo al textarea del email*/
+#mensaje {
+    padding: 10px;
+    width: 60%;
+    font-size: 15px;
+    border: 1px;
+    border-radius: 5px;
+    border: 1px solid $color-fondo-contacto;
+}
+
+/*dandole estilo al boton enviar*/
+#button {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: orange;
+    color: #cbecef;
+    font-family: map-get($fonts, font);
+    font-size: map-get($fonts, smaller-font);
+    cursor: pointer;
+    border: 1px solid #ced4da;
+}
+
+/*contenedor del mail, teléfono y redes*/
+.masInfo {
+    margin-top: 20px;
+    padding-bottom: 50px;
+}
+
+/*solo mail y teléfono*/
+.masDatos {
+    margin: 30px 20% 30px 20%;
+    text-align: left;
+}
+
+.redes {
+    display: flex;
+    margin: 50px 20% 50px 20%;
+    justify-content: end;
+}
+
+/*iconos de las redes*/
+#icons {
+    font-size: map-get($fonts, smaller-font);
+    margin-bottom: 50px;
+}
+
+.fa-facebook {
+    text-decoration: none;
+    background-color: rgb(3, 3, 112);
+    color: white !important;
+    margin-right: 17px;
+    padding: 5px 10px 5px 10px;
+}
+
+.fa-instagram {
+    text-decoration: none;
+    background: linear-gradient(21deg, rgba(252, 189, 86, 1) 0%, rgba(226, 57, 98, 1) 39%, rgba(163, 54, 181, 1) 100%);
+    color: black !important;
+    margin-right: 15px;
+    padding: 5px 10px 5px 10px;
+}
+
+.fa-whatsapp {
+    text-decoration: none;
+    background-color: green;
+    color: white !important;
+    padding: 5px 10px 5px 10px;
+}
+
+/* Media Querys Contacto */
+
+@media screen and (max-width: 1600px) {
+    .masDatos {
+        margin: 30px 0 30px 0;
+        text-align: center;
+    }
+
+    .redes {
+        display: flex;
+        margin: 50px 0 50px 0;
+        justify-content: center;
+    }
+
+    .txtNombre {
+        margin-right: 0px;
+    }
+}
+
+@media screen and (max-width: 1060px) {
+
+    .mainContacto {
+        margin-top: 120px;
+        padding-bottom: 26px;
+    }
+
+    .contacto {
+        padding-right: 0;
+        padding-left: 0;
+
+        h1 {
+            padding-top: 120px;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .mainContacto {
+        margin-top: 70px;
+    }
+
+    .datos {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .txtNombre {
+        margin-right: 0px;
+        padding-bottom: 0px;
+    }
+
+    #nombre {
+        padding: 10px 0px 10px 2px;
+        font-size: 15px;
+    }
+
+    #correo {
+        padding: 10px 0px 10px 2px;
+        font-size: 15px;
+    }
+
+    #mensaje {
+        width: 80%;
+    }
+
+    #button {
+        padding: 10px;
+        font-size: 15px;
+    }
+}

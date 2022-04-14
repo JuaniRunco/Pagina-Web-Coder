@@ -1,90 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:ital@1&display=swap");
-/*--------- INDEX --------- */
-.tituloIndex, .verMas {
-  text-align: center;
-  margin-bottom: 80px;
-}
-
-.tituloIndex {
-  margin-top: 250px;
-  width: auto;
-  height: auto;
-  font-family: "Montserrat", sans-serif;
-  font-size: 70px;
-  font-weight: 600;
-}
-
-.tituloIndex p {
-  /*Mendoza Lotes en violeta*/
-  color: #400f85;
-}
-
-/*Tamaño del carrusel*/
-.tamañoImgCar {
-  margin-top: 0;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  padding: 1% 12%;
-}
-
-.tamañoImgCar img {
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.verMas {
-  margin-top: 0px;
-  width: 100%;
-  height: 100%;
-}
-
-.verMasLink {
-  text-decoration: none;
-  font-size: 20px;
-  color: black !important;
-}
-
-/* Media querys Index*/
-@media screen and (max-width: 1060px) {
-  .tituloIndex {
-    margin-top: 216px;
-    margin-bottom: 80px;
-    font-size: 60px;
-  }
-  .tamañoImgCar {
-    padding: 0% 6%;
-  }
-  .verMas {
-    margin-top: 20px;
-    margin-bottom: 70px;
-    padding-right: 0px;
-  }
-}
-
-@media screen and (max-width: 650px) {
-  .tituloIndex {
-    margin-top: 179px;
-    margin-bottom: 60px;
-    font-size: 40px;
-  }
-  .verMas {
-    font-size: 20px;
-  }
-}
-
-@media screen and (max-width: 335px) {
-  .copy {
-    margin-top: 40px;
-  }
-}
-
 /*Para reestablecer valores predeterminados del html*/
 * {
   margin: 0;
@@ -274,10 +190,96 @@ footer {
   }
 }
 
+/*--------- INDEX --------- */
+.tituloIndex, .verMas {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.tituloIndex {
+  margin-top: 250px;
+  width: auto;
+  height: auto;
+  font-family: "Montserrat", sans-serif;
+  font-size: 70px;
+  font-weight: 600;
+}
+
+.tituloIndex p {
+  /*Mendoza Lotes en violeta*/
+  color: #400f85;
+}
+
+/*Tamaño del carrusel*/
+.tamañoImgCar {
+  margin-top: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  padding: 1% 12%;
+}
+
+.tamañoImgCar img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.verMas {
+  margin-top: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.verMasLink {
+  text-decoration: none;
+  font-size: 20px;
+  color: black !important;
+}
+
+/* Media querys Index*/
+@media screen and (max-width: 1060px) {
+  .tituloIndex {
+    margin-top: 216px;
+    margin-bottom: 80px;
+    font-size: 60px;
+  }
+  .tamañoImgCar {
+    padding: 0% 6%;
+  }
+  .verMas {
+    margin-top: 20px;
+    margin-bottom: 70px;
+    padding-right: 0px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .tituloIndex {
+    margin-top: 179px;
+    margin-bottom: 60px;
+    font-size: 40px;
+  }
+  .verMas {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 335px) {
+  .copy {
+    margin-top: 40px;
+  }
+}
+
 /*--------- TERRENOS ---------*/
 /*Darle estilo a las publicaciones en Terrenos*/
 .terreno {
   margin-top: 200px;
+  width: auto;
+  height: auto;
 }
 
 .terreno h1 {
@@ -301,6 +303,7 @@ footer {
 
 .box img {
   /*Darle estilo a las imagenes en el terreno */
+  margin-top: 0px;
   width: 329px;
   height: 230px;
   /*Le da estilo al hover*/
@@ -337,9 +340,11 @@ footer {
 
 /*Darle estilo al botón*/
 .contactarBtn {
+  margin-top: 20px;
+  width: auto;
+  height: auto;
   padding: 10px;
   border-radius: 10px;
-  margin-top: 20px;
   margin-left: 15px;
   color: #cbecef;
   background-color: black;
@@ -397,6 +402,7 @@ footer {
     border-radius: 15px;
   }
   .box img {
+    margin-top: 0px;
     width: 272px;
     height: 211px;
     -webkit-transition: -webkit-transform .2s;
@@ -419,6 +425,7 @@ footer {
     margin: 50px 15px 70px 15px;
   }
   .box img {
+    margin-top: 0px;
     width: 252px;
     height: 184px;
   }
@@ -427,6 +434,8 @@ footer {
 /*--------- ZONAS ---------*/
 .zonas {
   margin-top: 200px;
+  width: auto;
+  height: auto;
 }
 
 .zonas h1 {
@@ -435,9 +444,12 @@ footer {
 
 .zonas div {
   margin-top: 50px;
+  width: auto;
+  height: auto;
 }
 
 .zonas img {
+  margin-top: 0;
   width: 460px;
   height: 315px;
 }
@@ -459,6 +471,7 @@ footer {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: guaymallen;
+  margin-top: 0;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -470,6 +483,7 @@ footer {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: maipu;
+  margin-top: 0;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -481,6 +495,7 @@ footer {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: lasheras;
+  margin-top: 0;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -492,6 +507,7 @@ footer {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: lujan;
+  margin-top: 0;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -528,10 +544,12 @@ footer {
     margin: 0;
   }
   .zonas img {
+    margin-top: 0;
     width: 287px;
     height: 222px;
   }
   .zonas iframe {
+    margin-top: 0;
     width: 287px;
     height: 222px;
   }
@@ -542,6 +560,8 @@ footer {
   /*para que quede todo el main centrado*/
   text-align: center;
   margin-top: 134px;
+  width: auto;
+  height: auto;
   background-color: rgba(0, 0, 0, 0.157);
 }
 
@@ -560,6 +580,8 @@ footer {
 
 .formulario {
   margin-top: 50px;
+  width: auto;
+  height: auto;
 }
 
 /*datos del nombre y el email*/
@@ -612,8 +634,8 @@ footer {
   border-radius: 5px;
   background-color: orange;
   color: #cbecef;
+  font-family: "Montserrat", sans-serif;
   font-size: 20px;
-  font-family: 'Montserrat', sans-serif;
   cursor: pointer;
   border: 1px solid #ced4da;
 }
@@ -642,7 +664,7 @@ footer {
 
 /*iconos de las redes*/
 #icons {
-  font-size: 30px;
+  font-size: 20px;
   margin-bottom: 50px;
 }
 
@@ -742,6 +764,8 @@ footer {
 /*todo el contenedor del main*/
 .mainNos {
   margin-top: 134px;
+  width: auto;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -756,6 +780,8 @@ footer {
 /*título y párrafo*/
 .nosotros {
   margin-top: 150px;
+  width: auto;
+  height: auto;
   margin-right: 50px;
 }
 
@@ -767,12 +793,15 @@ footer {
 
 .nosotros p {
   margin-top: 50px;
+  width: auto;
+  height: auto;
   font-size: 1.2rem;
   padding-right: 50px;
   text-align: justify;
 }
 
 .video {
+  margin-top: 0;
   width: 40vw;
   height: 93vh;
   margin-bottom: 50px;
@@ -814,7 +843,7 @@ footer {
 
 @media screen and (max-width: 600px) {
   .nosotros h1 {
-    font-size: 35px;
+    font-size: 40px;
   }
 }
 /*# sourceMappingURL=style.css.map */

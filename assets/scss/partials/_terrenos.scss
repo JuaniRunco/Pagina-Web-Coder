@@ -1,0 +1,149 @@
+/*--------- TERRENOS ---------*/
+
+/*Darle estilo a las publicaciones en Terrenos*/
+.terreno {
+
+    @include properties(200px, auto, auto);
+
+    h1 {
+        /*Darle estilo al titulo "Terrenos"*/
+        padding-left: 10%;
+        padding-bottom: 30px;
+        font-size: map-get($fonts, small-font);
+        font-weight: 600;
+    }
+}
+
+.box {
+    /*Junta en este caso la publicacion con el texto*/
+    display: flex;
+    margin: 50px 300px 70px 300px;
+    border: solid 1px #0A232B;
+    border-radius: 15px;
+    padding: 20px;
+
+    img {
+        /*Darle estilo a las imagenes en el terreno */
+        @include properties (0px, 329px, 230px);
+        /*Le da estilo al hover*/
+        transition: transform .2s;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    img:hover {
+        /*Animacion en las imágenes*/
+        -ms-transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+        border-radius: 5px;
+    }
+}
+
+/*Párrafo con el botón*/
+.btnParrafo {
+    padding-left: 10px;
+}
+
+.parrafo {
+    text-align: justify;
+    padding-right: 30px;
+    padding-left: 15px;
+}
+
+.boton {
+    text-align: right;
+    padding-right: 30px;
+}
+
+/*Darle estilo al botón*/
+.contactarBtn {
+    @include properties(20px, auto, auto);
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 15px;
+    color: #cbecef;
+    background-color: black;
+    border: 2px;
+    cursor: pointer;
+}
+
+/*Media Querys Terrenos*/
+@media screen and (max-width: 1700px) {
+    .box {
+        margin: 50px 100px 70px 100px;
+    }
+}
+
+@media screen and (max-width: 1330px) {
+
+    .box img {
+        padding-bottom: 10px;
+    }
+
+    .terreno {
+        margin-bottom: 100px;
+
+        h1 {
+            text-align: center;
+            padding-left: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    .box {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .btnParrafo {
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .parrafo {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .boton {
+        text-align: center;
+        padding-right: 0px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .box {
+        margin: 50px 50px 70px 50px;
+        border: solid 1px #0A232B;
+        border-radius: 15px;
+
+        img {
+            @include properties (0px, 272px, 211px);
+            transition: transform .2s;
+        }
+    }
+
+    .parrafo {
+        text-align: justify;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .contactarBtn {
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-width: 460px) {
+
+    .box {
+        margin: 50px 15px 70px 15px;
+
+        img {
+            @include properties (0px, 252px, 184px);
+        }
+    }
+}

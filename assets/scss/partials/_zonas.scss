@@ -1,0 +1,94 @@
+/*--------- ZONAS ---------*/
+.zonas {
+    @include properties(200px, auto, auto);
+
+    h1 {
+        text-align: center;
+    }
+
+    div {
+        @include properties(50px, auto, auto);
+    }
+
+    img {
+        @include properties(0, 460px, 315px);
+    }
+}
+
+/*Agregando grid a zonas*/
+.zonasBody {
+    margin: 0px 5% 0px 5%;
+    display: grid;
+    grid-row-gap: 251px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 30% 30%;
+    grid-template-areas:
+        "guaymallen maipu "
+        "lasheras lujan";
+}
+
+.guaymallen {
+    grid-area: guaymallen;
+    @include properties(0, 100%, 100%);
+    object-fit: cover;
+    text-align: center;
+}
+
+.maipu {
+    grid-area: maipu;
+    @include properties(0, 100%, 100%);
+    object-fit: cover;
+    text-align: center;
+}
+
+.lasHeras {
+    grid-area: lasheras;
+    @include properties(0, 100%, 100%);
+    object-fit: cover;
+    text-align: center;
+}
+
+.lujan {
+    grid-area: lujan;
+    @include properties(0, 100%, 100%);
+    object-fit: cover;
+    text-align: center;
+}
+
+/* Media Querys Zonas */
+@media screen and (max-width: 1060px) {
+    .zonasBody {
+        display: flex;
+        flex-direction: column;
+        grid-row-gap: 0px;
+        padding-bottom: 150px;
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+    .zonas {
+        margin-top: 180px;
+
+        div {
+            margin-top: 40px;
+        }
+    }
+}
+
+@media screen and (max-width:520px) {
+
+    .zonasBody {
+        margin: 0;
+    }
+
+    .zonas {
+        img {
+            @include properties(0, 287px, 222px);
+        }
+
+        iframe {
+            @include properties(0, 287px, 222px);
+        }
+    }
+}
